@@ -4,5 +4,5 @@ GREML phenotype files need to be in the format FID, IID, phenotypes, with no hea
 file from a file that has 'eid|sex|ad_status' as columns. 
 
 ```
-awk 'BEGIN{FS="\t"}{print $1"\t"$1"\t"$3}' ad_phen_sex.tsv >> AD.phen
+tail -n +2 ad_phen_sex.tsv | awk 'BEGIN{FS="\t"}{print $1"\t"$1"\t"$3}' >> AD.phen
 ```
