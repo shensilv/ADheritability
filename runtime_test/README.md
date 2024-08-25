@@ -7,7 +7,7 @@ In particular, we are interested in how the run-time scales with the number of i
 
 In the 50k cohort, we test the effects of number of threads and number of GRMs. First, we keep 1 GRM and test how using a different number of threads affects the analysis. 
 
-### Creating phenotype and cohort
-The code for this is in files [insert files]
+### Creating phenotype and covariate files for 50k cohort
+We 
 
 ###
