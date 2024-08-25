@@ -81,3 +81,30 @@ Remember to sanity check the resulting dataframe.
 print(covars_50k.count()) # check number of rows - 48262
 print(len(covars_50k.columns)) # check number of columns, should be eid + sex + array + centre + 10 PCs = 14
 ```
+Now put everything into the right format for GCTA covariates.
+
+```
+#First, convert batch to either 'Affymetrix' or 'Illumina', and sex into 'F' or 'M'
+covars_50k_pd['batch'] = covars_50k_pd['p22000'].apply(lambda x: 'Affymetrix' if x.startswith('UKBiLEVE') else ('Illumina' if x.startswith('Batch') else None))
+covars_50k_pd['sex'] = covars_50k_pd['p31'].apply(lambda x: 'F' if x == 'Female' else 'M')
+```
+
+```
+# Next, we need to separate continuous and discrete covars. 
+
+discrete_pd = covars_50k_pd[['eid', 'eid', 'batch', 'sex', 'p54_i0']]
+cont_pd = covars_50k_pd[['eid', 'eid', 'p22009_a1', 'p22009_a2', 'p22009_a3', 'p22009_a4','p22009_a5','p22009_a6','p22009_a7','p22009_a8','p22009_a9','p22009_a10']]
+```
+
+Now save the files in the GCTA format:
+
+```
+discrete_pd.to_csv('discrete_covars_50k.tsv', header=False, sep='\t', index=False)
+cont_pd.to_csv('cont_covars_50k.tsv', header=False, sep='\t', index=False)
+```
+
+```
+%%bash
+dx upload discrete_covars_50k.tsv --dest /
+dx upload cont_covars_50k.tsv --dest /
+```
