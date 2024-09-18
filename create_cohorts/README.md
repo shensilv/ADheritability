@@ -1,4 +1,4 @@
-# Creating cohorts to run heritability analysis in
+# Creating cohorts for heritability analysis
 
 Heritability analysis is run on several cohorts. The sample sizes quoted below are following removals. See the 'ADphenotype' repository for more information on what these extractions are and how the extration EID files are created. 
 1) Preliminary analysis: we estimate heritability in the **Edinburgh cohort of UK BioBank**.   
@@ -12,12 +12,14 @@ Heritability analysis is run on several cohorts. The sample sizes quoted below a
 Below are the steps for creating the files needed for heritability analysis on a particular cohort.
 
 1) Download full eids for cohort of interest (for instructions on this, see 'ADphenotype' repo).
-2) Remove exclusions.
-   [remove_exclusions_test.R](remove_exclusions_test.R) for removing exclusions from the testing cohorts.
-   [remove_exclusions_all.R](remove_exclusions_all.R) for removing exclusions from the full UKB cohort. 
-4) Put AD phenotype files in the desired format for GCTA (essentially PLINK format).
-   [make_phen.R](make_phen.R) for making the phenotype for 50k. 
-   [make_phen_100k.R](make_phen_100k.R) for making the phenotype for 100k.
-   [make_phen_fullUKB.R](make_phen_fullUKB.R) for making the phenotype for the full UKB cohort.
+2) Remove exclusions.   
+   - [remove_exclusions_test.R](remove_exclusions_test.R) for removing exclusions from the testing cohorts.   
+   - [remove_exclusions_all.R](remove_exclusions_all.R) for removing exclusions from the full UKB cohort.    
+4) Put AD phenotype files in the desired format for GCTA (essentially PLINK format).   
+   - [make_phen.R](make_phen.R) for making the phenotype for 50k.    
+   - [make_phen_100k.R](make_phen_100k.R) for making the phenotype for 100k.   
+   - [make_phen_fullUKB.R](make_phen_fullUKB.R) for making the phenotype for the full UKB cohort.   
 5) To make the ID files for the GRM for each cohort, simply run `awk '{print $1"\t"$2}' <phenotype file> >> <id file>`.
-6) To make covariate files, 
+6) To make covariate files, use the UKB RAP scripts provided.   
+   - [50k_covars.html](50k_covars.html) to make covariates for 50k cohort.   
+   - [100k_covars.ipynb](100k_covars.ipynb)  to make covariates for 100k cohort.    
