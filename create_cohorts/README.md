@@ -1,3 +1,5 @@
+# Creating cohorts to run heritability analysis in
+
 Heritability analysis is run on several cohorts. The sample sizes quoted below are following removals. See the 'ADphenotype' repository for more information on what these extractions are and how the extration EID files are created. 
 1) Preliminary analysis: we estimate heritability in the **Edinburgh cohort of UK BioBank**.   
    This cohort has 1214 cases and 13478 controls, with a total sample size of 14692. 
@@ -10,5 +12,5 @@ Heritability analysis is run on several cohorts. The sample sizes quoted below a
 Below are the steps for creating the files needed for heritability analysis on a particular cohort.
 
 1) Download full eids for cohort of interest (for instructions on this, see 'ADphenotype' repo).
-2) Remove exclusions through [remove_exclusions.R](remove_exclusions.R).
+2) Remove exclusions. 
 3) Put AD phenotype files in the desired format for GCTA (essentially PLINK format). For each cohort, we need scripts for creating the GRM and scripts for running GREML, which includes covariate scripts. 
