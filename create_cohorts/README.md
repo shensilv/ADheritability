@@ -1,4 +1,4 @@
-# Creating cohorts for heritability analysis
+# Creating population cohorts for heritability analysis
 
 Heritability analysis is run on several cohorts. The sample sizes quoted below are following removals. See the 'ADphenotype' repository for more information on what these extractions are and how the extration EID files are created. 
 1) Preliminary analysis: we estimate heritability in the **Edinburgh cohort of UK BioBank**.   
