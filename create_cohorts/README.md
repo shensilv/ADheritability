@@ -15,4 +15,7 @@ Below are the steps for creating the files needed for heritability analysis on a
 2) Remove exclusions.
    [remove_exclusions_test.R](remove_exclusions_test.R) for removing exclusions from the testing cohorts.
    [remove_exclusions_all.R](remove_exclusions_all.R) for removing exclusions from the full UKB cohort. 
-4) Put AD phenotype files in the desired format for GCTA (essentially PLINK format). For each cohort, we need scripts for creating the GRM and scripts for running GREML, which includes covariate scripts. 
+4) Put AD phenotype files in the desired format for GCTA (essentially PLINK format). For each cohort, we need scripts for creating the GRM and scripts for running GREML, which includes covariate scripts.
+   [make_phen.R](make_phen.R) for making the phenotype for 50k. 
+   [make_phen_100k.R](make_phen_100k.R) for making the phenotype for 100k.
+   [make_phen_fullUKB.R](make_phen_fullUKB.R) for making the phenotype for the full UKB cohort.
