@@ -1,3 +1,3 @@
 # Preliminary analysis in the Edinburgh cohort
 
-Make the GRMs for analysis using [make_GRM](make_GRM). 
+Files to make GRMs for analysis in [make_GRM](make_GRM). 
