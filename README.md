@@ -4,7 +4,7 @@ Code for Chapter 3 of my thesis - 'Investigating the heritability of AD'
 
 ## Chapter 3.2. Method comparison
 
-In this section, I compare GCTA, MPH and GENIE runtimes as well as results for 50k and 100k individuals. 
+In this section, I compare GCTA, MPH and GENIE runtimes as well as results for 50k and 100k individuals. Go to folder [method_comparison](method_comparison) for code. 
 
 ## Chapter 3.3. Preliminary analysis in Edinburgh cohort
 - Creating cohorts to run heritability analysis on here [create_cohorts](create_cohorts)
