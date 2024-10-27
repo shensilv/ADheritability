@@ -8,6 +8,10 @@ Acknowledgements: Many thanks to Prof JiCai Jiang on useful advice for MPH imple
 
 For more information on the ~ 50k and ~ 100k cohort, please see the code in [create_cohorts](create_cohorts). 
 
+## Testing GCTA runtime
+
+Scripts to test runtime of GCTA on different numbers of cores for 50k and 100k individuals. Code here: [GCTA_runtime](GCTA_runtime). 
+
 ## Computational requirements
 
 All analysis is run with 14 fixed effects and N_grm + 1 random effects (number of GRMs and 1 residual random effect).    
